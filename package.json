@@ -4,7 +4,8 @@
   "description": "",
   "main": "webpack.config.base.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev:base": "webpack-dev-server --open --mode development --config webpacks/base/dev.js",
+    "build:base": "webpack --mode production --config webpacks/base/prod.js"
   },
   "repository": {
     "type": "git",
@@ -19,12 +20,16 @@
   "dependencies": {
     "@babel/core": "^7.4.4",
     "babel-loader": "^8.0.6",
+    "clean-webpack-plugin": "^2.0.2",
     "css-loader": "^2.1.1",
+    "html-webpack-plugin": "^3.2.0",
+    "mini-css-extract-plugin": "^0.6.0",
     "postcss-loader": "^3.0.0",
     "style-loader": "^0.23.1",
     "url-loader": "^1.1.2",
     "webpack": "^4.31.0",
-    "webpack-dev-server": "^3.4.1"
+    "webpack-dev-server": "^3.4.1",
+    "webpack-merge": "^4.2.1"
   },
   "devDependencies": {
     "cz-conventional-changelog": "^2.1.0"
