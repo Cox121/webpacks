@@ -9,7 +9,7 @@ const baseConfig = merge(baseWebpackConfig, {
   entry: path.join(__dirname, './main.js'),
   output: {
     filename: 'app.[hash:7].js',
-    path: path.join(__dirname, './dist')
+    path: path.join(__dirname, '../dist')
   },
   plugins: [
     new HtmlWebpackPlugin({
