@@ -1,6 +1,13 @@
 const path = require('path')
+const HtmlWebpackPlugin = require('html-webpack-plugin')
 
 module.exports = {
+  target:'web',
+  entry: path.join(__dirname, '../target/main.js'),
+  output: {
+    filename: 'app.[hash:7].js',
+    path: path.join(__dirname, '../dist')
+  },
   module: {
     rules: [
       {
@@ -21,5 +28,12 @@ module.exports = {
         }
       }
     ]
-  }
+  },
+  plugins: [
+    new HtmlWebpackPlugin({
+      title:'webpack基础配置',
+      filename: 'index.html',
+      template: path.join(__dirname, '../target/index.html')
+    })
+  ]
 }
