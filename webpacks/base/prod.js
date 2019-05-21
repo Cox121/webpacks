@@ -1,7 +1,7 @@
 const webpack = require('webpack')
 const path = require('path')
 const merge = require('webpack-merge')
-const base = require('./base')
+const base = require('../webpack.config.base.js')
 const CleanWebpackPlugin = require('clean-webpack-plugin')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 
@@ -22,9 +22,7 @@ const prodConfig = merge(base, {
       filename: 'css/[name].css?v=[contenthash]',
       chunkFilename: "[id].css"
     }),
-    new CleanWebpackPlugin({
-      cleanOnceBeforeBuildPatterns: ['./dist']
-    })
+    new CleanWebpackPlugin() //默认删除output.path下所有内容
   ]
 })
 
