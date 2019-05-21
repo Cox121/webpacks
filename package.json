@@ -7,7 +7,9 @@
     "dev:base": "webpack-dev-server --open --mode development --config webpacks/base/dev.js",
     "build:base": "webpack --mode production --config webpacks/base/prod.js",
     "dev:babel": "webpack-dev-server --open --mode development --config webpacks/babel/dev.js",
-    "build:babel": "webpack --mode production --config webpacks/babel/prod.js"
+    "build:babel": "webpack --mode production --config webpacks/babel/prod.js",
+    "dev:vue": "webpack-dev-server --open --mode development --config webpacks/vue/dev.js",
+    "build:vue": "webpack --mode production --config webpacks/vue/prod.js"
   },
   "repository": {
     "type": "git",
@@ -28,9 +30,12 @@
     "file-loader": "^3.0.1",
     "html-webpack-plugin": "^3.2.0",
     "mini-css-extract-plugin": "^0.6.0",
-    "postcss-loader": "^3.0.0",
     "style-loader": "^0.23.1",
     "url-loader": "^1.1.2",
+    "vue": "^2.6.10",
+    "vue-loader": "^15.7.0",
+    "vue-style-loader": "^4.1.2",
+    "vue-template-compiler": "^2.6.10",
     "webpack": "^4.31.0",
     "webpack-dev-server": "^3.4.1",
     "webpack-merge": "^4.2.1"
