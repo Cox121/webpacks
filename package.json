@@ -5,7 +5,9 @@
   "main": "webpack.config.base.js",
   "scripts": {
     "dev:base": "webpack-dev-server --open --mode development --config webpacks/base/dev.js",
-    "build:base": "webpack --mode production --config webpacks/base/prod.js"
+    "build:base": "webpack --mode production --config webpacks/base/prod.js",
+    "dev:babel": "webpack-dev-server --open --mode development --config webpacks/babel/dev.js",
+    "build:babel": "webpack --mode production --config webpacks/babel/prod.js"
   },
   "repository": {
     "type": "git",
@@ -19,6 +21,7 @@
   "homepage": "https://github.com/Cox121/webpacks#readme",
   "dependencies": {
     "@babel/core": "^7.4.4",
+    "@babel/preset-env": "^7.4.4",
     "babel-loader": "^8.0.6",
     "clean-webpack-plugin": "^2.0.2",
     "css-loader": "^2.1.1",

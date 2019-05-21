@@ -17,7 +17,7 @@ const devConfig = merge(base, {
   },
   devtool: '#cheap-moudle-eval-source-map', //webpack认为适合在开发环境下使用的source-map
   devServer: {
-    host:'0.0.0.0',
+    host:'localhost', //0.0.0.0可以兼容 localhost和当前电脑ip和127.0.0.1
     port: 8000,
     overlay: { //将打包过程中的错误信息显示在网页上
       errors:true

@@ -14,9 +14,9 @@ module.exports = {
         test: /\.(gif|jpe?g|png|bmp|svg)(\?.*)?$/,
         loader: 'url-loader',
         options: {
-          limit: 8192,
+          limit: 10000,
           name: '[name].[hash:7].[ext]',
-          outputPath:path.join(__dirname, '../dist/imgs')
+          outputPath:'../dist/imgs'
         }
       },
       {
@@ -24,7 +24,7 @@ module.exports = {
         loader: 'url-loader',
         options: {
           name: '[name].[hash:7].[ext]',
-          outputPath:path.join(__dirname, '../dist/fonts')
+          outputPath:'../dist/fonts'
         }
       }
     ]
