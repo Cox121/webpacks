@@ -37,6 +37,11 @@ const devConfig = merge(base, {
   },
   plugins:[
     new webpack.HotModuleReplacementPlugin() //热更新插件
+    /** 
+     if(module.hot){
+       module.hot.accept()
+     }
+    **/
   ]
 })
 
